@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BoldorMihai"
+             x:Class="BoldorMihai.MainPage">
+
+    <StackLayout>
+        <Picker x:Name="SchimbaMenu" 
+                SelectedIndexChanged="MainMenuPicker_SelectedIndexChanged">
+            <Picker.Title>
+                Menu
+            </Picker.Title>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>MainPage</x:String>
+                    <x:String>Comenzi</x:String>
+                    <x:String>Preparate</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <StackLayout>
+            <Image Source="logoapp.png" 
+                   Aspect="AspectFit" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" 
+                   WidthRequest="400" 
+                   HeightRequest="400"
+                   Margin="0,10,0,0"/>
+            <Label Text="In aceasta aplicatie, chelnerii unui restaurant"
+                   TextColor="White" 
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0"/>
+            <Label Text="pot sa isi noteze comenzile."
+                   TextColor="White" 
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,0"/>
+            <Label Text="Aplicatie creata de Boldor Mihai"
+                   TextColor="Gray" 
+                   HorizontalOptions="Center"
+                   Margin="0,50,0,0"/>
+            <Label Text="UBB FSEGA, IF, Management anul 3, grupa 1"
+                   TextColor="Gray" 
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,0"/>
+            <Label Text="Optional medii de programare si dezvoltare"
+                   TextColor="Gray" 
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,0"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

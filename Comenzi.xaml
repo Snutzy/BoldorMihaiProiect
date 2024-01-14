@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoldorMihai.Comenzi"
+             Title="Comenzi restaurant">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout>
+            <ListView x:Name="listView"
+                  Margin="20"
+                  ItemSelected="OnListViewItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Description}"
+                              Detail="{Binding Date}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Adauga o comanda noua" 
+                    MaximumWidthRequest="200"
+                    Clicked="OnShopListAddedClicked"
+                    Margin="0,0,0,20"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

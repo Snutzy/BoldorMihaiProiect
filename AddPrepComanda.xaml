@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoldorMihai.AddPrepComanda"
+             Title="AdaugaPreparate">
+    <ContentPage.Content>
+        <StackLayout Margin="20" 
+                     VerticalOptions="FillAndExpand">
+            <Grid>
+                <ListView Grid.Row="1" 
+                          Grid.Column="0" 
+                          x:Name="listView"
+                          Margin="20" 
+                          IsRefreshing="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Description}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Text="Adauga preparat la comanda" 
+                        MaximumWidthRequest="220"
+                        Clicked="OnAddButtonClicked" 
+                        Margin="0,0,0,10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BoldorMihai.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BoldorMihai"
+    Shell.FlyoutBehavior="Disabled"
+    Title="BoldorMihai">
+
+    <Shell.TitleView>
+        <Grid BackgroundColor="#0a0908">
+            <Label Text="Restaurantul FSEGA" 
+                   TextColor="#fca311" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="18"/>
+        </Grid>
+    </Shell.TitleView>
+
+    <ShellContent
+        Title="Pagina principala" 
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
